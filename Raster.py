@@ -11,9 +11,9 @@ def get_raster_extent(raster_file):
     raster_extent = arcpy.Describe(raster_file).extent
 
     # 提取栅格的四个角的坐标
-    min_lat = raster_extent.YMin
-    max_lat = raster_extent.YMax
-    min_lon = raster_extent.XMin
-    max_lon = raster_extent.XMax
+    min_y = raster_extent.YMin
+    max_y = raster_extent.YMax
+    min_x = raster_extent.XMin
+    max_x = raster_extent.XMax
 
-    return (min_lat, min_lon, max_lat, max_lon)
+    return (min_y, min_x, max_y, max_x)
